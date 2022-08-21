@@ -15,7 +15,8 @@ contract footprint is ERC721URIStorage {
   Counters.Counter private _tokenIds;
 
   // We need to pass the name of our NFTs token and its symbol.
-  constructor() ERC721 ("footprint nft", "f00tprint") {
+  constructor() ERC721 ("F00tprint NFT", "f00tCO2") {
+    console.log("This is my NFT contract. Woah!");
   }
 
   // A function our user will hit to get their NFT.
@@ -27,3 +28,4 @@ contract footprint is ERC721URIStorage {
     _safeMint(msg.sender, newItemId);
 
     // Set the NFTs data.
+    //_setTokenURI(newItemId, "https://jsonkeeper.com/b/L048");

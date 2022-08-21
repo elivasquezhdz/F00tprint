@@ -3,6 +3,7 @@ import json
 from flask import jsonify, flash, request, Flask, make_response
 import base64
 import random
+import time
 app = Flask(__name__)
 
 
@@ -22,8 +23,8 @@ bottomsvg = '''Hi {}</text>
   <text x="50%" y="85%" class="add" dominant-baseline="middle" text-anchor="middle">Thant's like {:.2f} Eth transactions</text>
 </svg>
 '''
-sol1 = open("contracts/protofoot").read()
-sol3 = open("contracts/footfoot").read()
+sol1 = open("base.sol").read()
+sol3 = open("last.sol").read()
 svgsol = '''   _setTokenURI(newItemId, "data:application/json;base64,{}");
 '''
 
@@ -68,8 +69,10 @@ def mint():
     data = json.loads(request.get_data().decode())  # ['json_payload']
     # print(data)
     address, cotons, trans = gen_tons_trans(data)
-    encodedsvg(address, cotons, trans)
-    #os.system("npx hardhat run scripts/deploy.js --network mumbai")
+    svg = encodedsvg(address, cotons, trans)
+    gen_sol(svg)
+    time.sleep(3)
+    os.system("npx hardhat run scripts/deploy.js --network mumbai")
     return jsonify({"status": "Minted"})
 
 

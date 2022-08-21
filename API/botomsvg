@@ -1,0 +1,7 @@
+'''Hi {}</text>
+  <text x="50%" y="30%" class="add" dominant-baseline="middle" text-anchor="middle">Your footprint is {} Tons of C02</text>
+  <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">That is lot!</text>
+  <text x="50%" y="70%" class="base" dominant-baseline="middle" text-anchor="middle">You could take some actions to lower it</text>
+  <text x="50%" y="85%" class="add" dominant-baseline="middle" text-anchor="middle">Thant's like {} Eth transactions</text>
+</svg>
+'''

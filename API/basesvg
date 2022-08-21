@@ -1,0 +1,7 @@
+
+
+  <style>.base { fill: white; font-family: serif; font-size: 28px; }</style>
+  <style>.add { fill: white; font-family: serif; font-size: 20px; }</style>
+
+  <rect x="10" y="10" rx="15" ry="15" width="480" height="480" fill="url(#Gradient2)"/>
+  <text x="50%" y="15%" class="add" dominant-baseline="middle" text-anchor="middle">

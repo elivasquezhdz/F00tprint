@@ -8,15 +8,30 @@ export default class MyForm extends React.Component {
       {
         'tag': 'input',
         'type': 'text',
-        'name': 'nickname',
-        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\nWhat is your Nickname?'
+        'name': 'wallet',
+        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\nWhat is your Polygon wallet address?'
       },
       {
         'tag': 'input',
-        'type': 'text',
-        'name': 'wallet',
-        'cf-questions': 'What is your Polygon wallet address?'
-      }
+        'type': 'number',
+        'name': 'cars',
+        'cf-questions': 'How many cars do you use?'
+      }, // 2 tons per car
+      {
+        'tag': 'input',
+        'type': 'number',
+        'name': 'shortflights',
+        'cf-questions': 'How many short flights do you take in a year?'
+      },//1 tons per flight
+      {
+        'tag': 'input',
+        'type': 'number',
+        'name': 'longflights',
+        'cf-questions': 'How many long flights do you take each year?'
+      },//2.5 tons per flight
+
+
+      
     ];
     
     this.submitCallback = this.submitCallback.bind(this);
@@ -38,6 +53,16 @@ export default class MyForm extends React.Component {
     var formDataSerialized = this.cf.getFormData(true);
     console.log("Formdata, obj:", formDataSerialized);
     this.cf.addRobotChatResponse("Done!!!\nPlease check OpenSea for your nft!")
+    const requestOptions = {
+      method: 'POST',
+
+      body: JSON.stringify(formDataSerialized)
+  };
+  fetch('http://localhost:5000/mint', requestOptions)
+      .then(response => response.json())
+      .then(data => this.setState({ postId: data.id }));
+
+
   }
   
   render() {

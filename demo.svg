@@ -1,0 +1,22 @@
+<svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="0%" stop-color="red"/>
+
+        <stop offset="100%" stop-color="blue"/>
+      </linearGradient>
+  </defs>
+
+  <style>.base { fill: white; font-family: serif; font-size: 28px; }</style>
+  <rect x="10" y="10" rx="15" ry="15" width="480" height="480" fill="url(#Gradient2)"/>
+  <text x="50%" y="10%" class="base" dominant-baseline="middle" text-anchor="middle"> 😡 DIESEL WEASEL</text>
+  <text x="50%" y="30%" class="base" dominant-baseline="middle" text-anchor="middle">Your footprint is XX Tons of C02</text>
+  <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">That is lot!</text>
+  <text x="50%" y="70%" class="base" dominant-baseline="middle" text-anchor="middle">You could take some actions to </text>
+  <text x="50%" y="85%" class="base" dominant-baseline="middle" text-anchor="middle">Thant's like XXX Eth transactions</text>
+
+  <style>.add { fill: white; font-family: serif; font-size: 14px; }</style>
+  <text x="50%" y="95%" class="add" dominant-baseline="middle" text-anchor="middle">0x8CaBc9F7DC3fd0828D7A76a6fe5465f6E56f4c72</text>
+
+</svg>
+

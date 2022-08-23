@@ -52,7 +52,7 @@ export default class MyForm extends React.Component {
   submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
     console.log("Formdata, obj:", formDataSerialized);
-    this.cf.addRobotChatResponse("Done!!!\nPlease check OpenSea for your nft!\nLook for this account 0x8CaBc9F7DC3fd0828D7A76a6fe5465f6E56f4c72")
+    this.cf.addRobotChatResponse("Done!!!\nPlease check OpenSea for your nft!\nLook for this account 0x8CaBc9F7DC3fd0828D7A76a6fe5465f6E56f4c72\n on testnet")
     const requestOptions = {
       method: 'POST',
 

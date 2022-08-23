@@ -9,7 +9,7 @@ export default class MyForm extends React.Component {
         'tag': 'input',
         'type': 'text',
         'name': 'wallet',
-        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\Enter your Nickname or your Polygon wallet address?'
+        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\nEnter your Nickname or your Polygon wallet address?'
       },
       {
         'tag': 'input',
@@ -52,7 +52,7 @@ export default class MyForm extends React.Component {
   submitCallback() {
     var formDataSerialized = this.cf.getFormData(true);
     console.log("Formdata, obj:", formDataSerialized);
-    this.cf.addRobotChatResponse("Done!!!\nPlease check OpenSea for your nft!")
+    this.cf.addRobotChatResponse("Done!!!\nPlease check OpenSea for your nft!\nLook for this account 0x8CaBc9F7DC3fd0828D7A76a6fe5465f6E56f4c72")
     const requestOptions = {
       method: 'POST',
 

@@ -29,3 +29,4 @@ contract footprint is ERC721URIStorage {
 
     // Set the NFTs data.
     //_setTokenURI(newItemId, "https://jsonkeeper.com/b/L048");
+    

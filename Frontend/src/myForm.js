@@ -9,7 +9,7 @@ export default class MyForm extends React.Component {
         'tag': 'input',
         'type': 'text',
         'name': 'wallet',
-        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\nWhat is your Polygon wallet address?'
+        'cf-questions': 'Welcome to F00tprint, this app will ask you for some questions and mint an NFT based on your answers\Enter your Nickname or your Polygon wallet address?'
       },
       {
         'tag': 'input',

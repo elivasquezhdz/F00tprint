@@ -1,8 +1,8 @@
 <svg width="500" height="500" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
       <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
-        <stop offset="0%" stop-color="#f8ff00"/>
-        <stop offset="100%" stop-color="#3ad59f"/>
+        <stop offset="0%" stop-color="#3F2B96"/>
+        <stop offset="100%" stop-color="#A8C0FF"/>
       </linearGradient>
   </defs>
 
@@ -11,9 +11,9 @@
   <style>.add { fill: white; font-family: serif; font-size: 20px; }</style>
 
   <rect x="10" y="10" rx="15" ry="15" width="480" height="480" fill="url(#Gradient2)"/>
-  <text x="50%" y="15%" class="add" dominant-baseline="middle" text-anchor="middle">Hi 0x8CaBc9F7DC3fd0828D7A76a6fe5465f6E56f4c72</text>
-  <text x="50%" y="30%" class="add" dominant-baseline="middle" text-anchor="middle">Your footprint is 58.0 Tons of C02</text>
+  <text x="50%" y="15%" class="add" dominant-baseline="middle" text-anchor="middle">Hi 0x4876b33e224B1530e6fe3f2dFCE1B0cA5D47634B</text>
+  <text x="50%" y="30%" class="add" dominant-baseline="middle" text-anchor="middle">Your footprint is 20.0 Tons of C02</text>
   <text x="50%" y="50%" class="base" dominant-baseline="middle" text-anchor="middle">That is lot!</text>
   <text x="50%" y="70%" class="base" dominant-baseline="middle" text-anchor="middle">You could take some actions to lower it</text>
-  <text x="50%" y="85%" class="add" dominant-baseline="middle" text-anchor="middle">Thant's like 0.56 Eth transactions</text>
+  <text x="50%" y="85%" class="add" dominant-baseline="middle" text-anchor="middle">Thant's like 0.19 Eth transactions</text>
 </svg>

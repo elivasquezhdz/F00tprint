@@ -43,7 +43,8 @@ def randomcolors():
     return random.choices(colors)[0]
 
 
-def encodedsvg(address, cotons, trans):
+def encodedjson(address, cotons, trans):
+    preffix = '''{"name":"f00tprint","description":"a nft of your carbon footprint","image":"data:image/svg+xml;base64,'''
     c1, c2 = randomcolors()
     message = topsvg.format(c1, c2) + basesvg + \
         bottomsvg.format(address, cotons, trans)
@@ -52,6 +53,12 @@ def encodedsvg(address, cotons, trans):
     message_bytes = message.encode('ascii')
     base64_bytes = base64.b64encode(message_bytes)
     base64_message = base64_bytes.decode('ascii')
+    base64_message = preffix + base64_message + '''"}'''
+
+    message_bytes = base64_message.encode('ascii')
+    base64_bytes = base64.b64encode(message_bytes)
+    base64_message = base64_bytes.decode('ascii')
+
     return base64_message
 
 
@@ -69,8 +76,8 @@ def mint():
     data = json.loads(request.get_data().decode())  # ['json_payload']
     # print(data)
     address, cotons, trans = gen_tons_trans(data)
-    svg = encodedsvg(address, cotons, trans)
-    gen_sol(svg)
+    encjson = encodedjson(address, cotons, trans)
+    gen_sol(encjson)
     time.sleep(3)
     os.system("npx hardhat run scripts/deploy.js --network mumbai")
     return jsonify({"status": "Minted"})
